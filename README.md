@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌞 Happy Algorithm
 
-## Getting Started
+**행복 방정식 기반으로 일일 행복 점수를 시각화하는 감성 웹앱**
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-13+-black?logo=nextdotjs)](https://nextjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-blue?logo=tailwindcss)](https://tailwindcss.com/)
+[![Author](https://img.shields.io/badge/Made%20by-MeotJH-blueviolet)](https://github.com/MeotJH)
+
+---
+
+## 🔍 소개
+
+> “O + (N × S) + Cpm / T + He”
+
+이 웹앱은 심리학자 **Cliff Arnall**의 행복 방정식을 기반으로,
+당일의 실외활동, 자연과의 교감, 사회적 교류, 어린시절의 추억, 기온, 여름휴가 기대감 등의 요소를 입력받아  
+**사용자의 행복 점수를 계산하고 시각화**합니다.
+
+토스 스타일의 감성적인 UI를 적용해,  
+**모바일 중심의 간결한 UX**를 제공합니다.
+
+---
+
+## 🚀 기능
+
+- ☀️ 실외활동 시간 입력
+- 🌳 자연과의 교감 정도 선택
+- 🧑‍🤝‍🧑 친구나 사회적 교류 평가
+- 🎠 어린시절 추억 회상 정도
+- 🌡️ 현재 기온 자동 감지 (위치 허용 시)
+- 🏖️ 다가오는 휴가에 대한 기대감
+- 📊 행복 점수 계산 + 해석
+- 🎯 점수 기준 시각화
+
+---
+
+## 🛠️ 기술 스택
+
+- **Next.js 14** (App Router 기반)
+- **Tailwind CSS**
+- **LocalStorage** 기반 상태 저장
+- **Custom Context API** 기반 Step Form 구성
+- **Geolocation API + open-meteo API**
+
+---
+
+## 📦 설치 및 실행
 
 ```bash
+git clone https://github.com/MeotJH/happy-algorithm.git
+cd happy-algorithm
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
