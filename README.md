@@ -6,18 +6,19 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-blue?logo=tailwindcss)](https://tailwindcss.com/)
 [![Author](https://img.shields.io/badge/Made%20by-MeotJH-blueviolet)](https://github.com/MeotJH)
 
+🔗 **Live Demo**: [https://happy-algorithm.vercel.app](https://happy-algorithm.vercel.app)
+
 ---
 
 ## 🔍 소개
 
 > “O + (N × S) + Cpm / T + He”
 
-이 웹앱은 심리학자 **Cliff Arnall**의 행복 방정식을 기반으로,
-당일의 실외활동, 자연과의 교감, 사회적 교류, 어린시절의 추억, 기온, 여름휴가 기대감 등의 요소를 입력받아  
-**사용자의 행복 점수를 계산하고 시각화**합니다.
+이 웹앱은 심리학자 **Cliff Arnall**의 행복 방정식을 기반으로,  
+실외활동, 자연과의 교감, 사회적 교류, 어린 시절의 추억, 기온, 휴가 기대감 등의 요인을 입력받아  
+**당일의 행복 점수를 계산하고 시각화**합니다.
 
-토스 스타일의 감성적인 UI를 적용해,  
-**모바일 중심의 간결한 UX**를 제공합니다.
+토스 스타일의 감성적인 UI와 **모바일 중심의 간결한 UX**를 제공합니다.
 
 ---
 
@@ -27,10 +28,10 @@
 - 🌳 자연과의 교감 정도 선택
 - 🧑‍🤝‍🧑 친구나 사회적 교류 평가
 - 🎠 어린시절 추억 회상 정도
-- 🌡️ 현재 기온 자동 감지 (위치 허용 시)
+- 🌡️ 현재 기온 자동 감지 (위치 허용 시, 미허용 시 서울 기온)
 - 🏖️ 다가오는 휴가에 대한 기대감
-- 📊 행복 점수 계산 + 해석
-- 🎯 점수 기준 시각화
+- 📊 행복 점수 계산 및 해석 제공
+- 🎯 점수 기준 시각화로 직관적인 피드백
 
 ---
 
@@ -38,9 +39,9 @@
 
 - **Next.js 14** (App Router 기반)
 - **Tailwind CSS**
-- **LocalStorage** 기반 상태 저장
-- **Custom Context API** 기반 Step Form 구성
-- **Geolocation API + open-meteo API**
+- **LocalStorage** 상태 저장
+- **Custom Context API**로 구성된 단계별 폼
+- **Geolocation API + open-meteo API**로 기온 자동 감지
 
 ---
 

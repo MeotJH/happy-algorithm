@@ -46,7 +46,16 @@ const order: Step[] = [
   "done",
 ];
 
-const FormContext = createContext<any>(null);
+interface FormContextType {
+  step: Step;
+  data: HappinessInput;
+  updateField: <K extends keyof HappinessInput>(key: K, value: HappinessInput[K]) => void;
+  goNext: () => void;
+  submit: () => void;
+  locationDenied: boolean;
+  getLabel: (value: number) => string;
+}
+const FormContext = createContext<FormContextType | null>(null);
 
 export function HappinessFormProvider({ children }: { children: ReactNode }) {
   const [step, setStep] = useState<Step>("outdoor");
@@ -99,7 +108,7 @@ export function HappinessFormProvider({ children }: { children: ReactNode }) {
             fetchSeoulTemp();
           }
         },
-        (error) => {
+        () => {
           setLocationDenied(true);
           fetchSeoulTemp();
         }
@@ -130,5 +139,9 @@ export function HappinessFormProvider({ children }: { children: ReactNode }) {
 }
 
 export function useHappinessForm() {
-  return useContext(FormContext);
+  const context = useContext(FormContext);
+  if (!context) {
+    throw new Error("useHappinessForm must be used within a HappinessFormProvider");
+  }
+  return context;
 }
